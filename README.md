@@ -18,7 +18,7 @@ Check [install docopt](https://pypi.org/project/docopt/) for more information
 ## Run the program
 
 
-1. Creating a StorageVM
+1. Creating a Volume
 
 ```bash
 create_vol.py -s [STORAGE] -vm [SVM] -VN [VOLUME] [SIZE]
