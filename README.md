@@ -35,3 +35,23 @@ create_vol.py -h | --help
 - [SVM] => Size of the volume that will be created
 
 
+##FLOWCHART
+
+```mermaid
+flowchart LR
+    S([Start]) --> I[/Input:<br>- Storage<br>- StorageVM<br>- Volume name<br>- Size of Volume/]
+    I --> C{Check if<br>Volume name is<br> valid}
+    C --YES--> Y{Create Volume}
+    Y --SUCCESS--> X{Check if Volume<br>already Exist}
+    X --YES--> Q>Success]
+    X --NO--> W>Volume Already running]
+    Y --FAILED-->  N>Failed to create<br>Display ERROR]
+    C --NO--> F>Invalid Volume name]
+    F --> E([STOP])
+    N --> E
+    Q --> E
+    W --> E
+
+
+
+```
